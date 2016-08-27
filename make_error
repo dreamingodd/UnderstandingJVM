@@ -1,0 +1,393 @@
+－－－－Make error: bootstrap JDK must be 7u4－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+－－－－ make -Weverything -Wno-switch-enum -Werror -Wsign-conversion
+
+build-bootstrap-javac:
+    [mkdir] Created dir: /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/langtools/build/bootstrap/gensrc
+    [mkdir] Created dir: /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/langtools/build/bootstrap/classes
+ [pcompile] Generating 7 resource files to /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/langtools/build/bootstrap/gensrc
+     [copy] Copying 1 file to /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/langtools/build/bootstrap/gensrc
+ [pcompile] Generating 1 resource files to /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/langtools/build/bootstrap/gensrc
+    [javac] Compiling 298 source files to /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/langtools/build/bootstrap/classes
+    [javac] /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/langtools/src/share/classes/com/sun/tools/javac/comp/Resolve.java:2182: ??: [overrides] ?Resolve.InapplicableSymbolsError.Candidate??? equals, ???????????? hashCode ??
+    [javac]         private class Candidate {
+    [javac]                 ^
+    [javac] ??: ????, ???? -Werror
+    [javac] 1 ???
+    [javac] 1 ???
+
+BUILD FAILED
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/langtools/make/build.xml:452: The following error occurred while executing this line:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/langtools/make/build.xml:795: Compile failed; see the compiler error output for details.
+
+Total time: 18 seconds
+make[2]: *** [build] Error 1
+make[1]: *** [langtools-build] Error 2
+make: *** [build_product_image] Error 2
+
+
+－－－－Make error: YourOpenJDK/hotspot/make/bsd/makefiles/gcc.make（line 119）CFLAGS += -fcheck-new－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+chmod +x test_gamma
+touch bsd_amd64_compiler2/profiled
+cd bsd_amd64_compiler2/product && /Applications/Xcode.app/Contents/Developer/usr/bin/make  " LP64=1 "
+cd /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/hotspot/outputdir/bsd_amd64_compiler2/product/../generated;  cp /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/make/bsd/platform_amd64 /Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build/hotspot/outputdir/bsd_amd64_compiler2/product/../generated/platform.current
+Compiling /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp
+rm -f ../generated/adfiles/adlparse.o
+llvm-g++ -D_ALLBSD_SOURCE -D_GNU_SOURCE -DAMD64 -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/prims -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/cpu/x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os_cpu/bsd_x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/bsd/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/posix/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc -I../generated -DASSERT -DTARGET_OS_FAMILY_bsd -DTARGET_ARCH_x86 -DTARGET_ARCH_MODEL_x86_64 -DTARGET_OS_ARCH_bsd_x86 -DTARGET_OS_ARCH_MODEL_bsd_x86_64 -DTARGET_COMPILER_gcc -DCOMPILER2 -DCOMPILER1  -fno-rtti -fno-exceptions -pthread -fcheck-new -m64 -pipe -Werror -g -c -o ../generated/adfiles/adlparse.o /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp
+clang: error: unknown argument: '-fcheck-new' [-Wunused-command-line-argument-hard-error-in-future]
+clang: note: this will be a hard error (cannot be downgraded to a warning) in the future
+make[8]: *** [../generated/adfiles/adlparse.o] Error 1
+make[7]: *** [ad_stuff] Error 2
+make[6]: *** [product] Error 2
+make[5]: *** [generic_build2] Error 2
+make[4]: *** [product] Error 2
+make[3]: *** [all_product_universal] Error 2
+make[2]: *** [universal_product] Error 2
+make[1]: *** [hotspot-build] Error 2
+make: *** [build_product_image] Error 2
+
+
+－－－－Make error: 改源码－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+llvm-g++ -D_ALLBSD_SOURCE -D_GNU_SOURCE -DAMD64 -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/prims -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/cpu/x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os_cpu/bsd_x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/bsd/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/posix/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc -I../generated -DASSERT -DTARGET_OS_FAMILY_bsd -DTARGET_ARCH_x86 -DTARGET_ARCH_MODEL_x86_64 -DTARGET_OS_ARCH_bsd_x86 -DTARGET_OS_ARCH_MODEL_bsd_x86_64 -DTARGET_COMPILER_gcc -DCOMPILER2 -DCOMPILER1  -fno-rtti -fno-exceptions -pthread -m64 -pipe -Werror -g -c -o ../generated/adfiles/adlparse.o /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3217:71: error: equality comparison with
+      extraneous parentheses [-Werror,-Wparentheses-equality]
+    if ( ((primary = get_ident_or_literal_constant("primary opcode")) == NULL) ) {
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3217:71: note: remove extraneous parentheses
+      around the comparison to silence this warning
+    if ( ((primary = get_ident_or_literal_constant("primary opcode")) == NULL) ) {
+         ~                                                            ^      ~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3217:71: note: use '=' to turn this equality
+      comparison into an assignment
+    if ( ((primary = get_ident_or_literal_constant("primary opcode")) == NULL) ) {
+                                                                      ^~
+                                                                      =
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3226:77: error: equality comparison with
+      extraneous parentheses [-Werror,-Wparentheses-equality]
+      if ( ((secondary = get_ident_or_literal_constant("secondary opcode")) == NULL) ) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3226:77: note: remove extraneous parentheses
+      around the comparison to silence this warning
+      if ( ((secondary = get_ident_or_literal_constant("secondary opcode")) == NULL) ) {
+           ~                                                                ^      ~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3226:77: note: use '=' to turn this equality
+      comparison into an assignment
+      if ( ((secondary = get_ident_or_literal_constant("secondary opcode")) == NULL) ) {
+                                                                            ^~
+                                                                            =
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3235:77: error: equality comparison with
+      extraneous parentheses [-Werror,-Wparentheses-equality]
+        if ( ((tertiary = get_ident_or_literal_constant("tertiary opcode")) == NULL) ) {
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3235:77: note: remove extraneous parentheses
+      around the comparison to silence this warning
+        if ( ((tertiary = get_ident_or_literal_constant("tertiary opcode")) == NULL) ) {
+             ~                                                              ^      ~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:3235:77: note: use '=' to turn this equality
+      comparison into an assignment
+        if ( ((tertiary = get_ident_or_literal_constant("tertiary opcode")) == NULL) ) {
+                                                                            ^~
+                                                                            =
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:4476:21: error: '&&' within '||'
+      [-Werror,-Wlogical-op-parentheses]
+  while ((c >= '0') && (c <= '9')
+         ~~~~~~~~~~~^~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:4476:21: note: place parentheses around the
+      '&&' expression to silence this warning
+  while ((c >= '0') && (c <= '9')
+                    ^
+         (                       )
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:4515:17: error: equality comparison with
+      extraneous parentheses [-Werror,-Wparentheses-equality]
+    if( (second == '=') ) {
+         ~~~~~~~^~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:4515:17: note: remove extraneous parentheses
+      around the comparison to silence this warning
+    if( (second == '=') ) {
+        ~       ^     ~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/adlparse.cpp:4515:17: note: use '=' to turn this equality
+      comparison into an assignment
+    if( (second == '=') ) {
+                ^~
+                =
+5 errors generated.
+make[8]: *** [../generated/adfiles/adlparse.o] Error 1
+make[7]: *** [ad_stuff] Error 2
+make[6]: *** [product] Error 2
+make[5]: *** [generic_build2] Error 2
+make[4]: *** [product] Error 2
+make[3]: *** [all_product_universal] Error 2
+make[2]: *** [universal_product] Error 2
+
+
+
+－－－－Make error: 改源码 out_c.cpp:3062/3779和out_h.cpp:1767:33还有类似的错误－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+llvm-g++ -D_ALLBSD_SOURCE -D_GNU_SOURCE -DAMD64 -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/prims -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/cpu/x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os_cpu/bsd_x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/bsd/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/posix/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc -I../generated -DASSERT -DTARGET_OS_FAMILY_bsd -DTARGET_ARCH_x86 -DTARGET_ARCH_MODEL_x86_64 -DTARGET_OS_ARCH_bsd_x86 -DTARGET_OS_ARCH_MODEL_bsd_x86_64 -DTARGET_COMPILER_gcc -DCOMPILER2 -DCOMPILER1  -fno-rtti -fno-exceptions -pthread -m64 -pipe -Werror -g -c -o ../generated/adfiles/archDesc.o /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/archDesc.cpp
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/archDesc.cpp:335:35: error: '&&' within '||'
+      [-Werror,-Wlogical-op-parentheses]
+    if ( instr->is_ideal_branch() && instr->label_position() == -1 ||
+         ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/archDesc.cpp:335:35: note: place parentheses around the
+      '&&' expression to silence this warning
+    if ( instr->is_ideal_branch() && instr->label_position() == -1 ||
+                                  ^
+         (                                                        )
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/archDesc.cpp:336:35: error: '&&' within '||'
+      [-Werror,-Wlogical-op-parentheses]
+        !instr->is_ideal_branch() && instr->label_position() != -1) {
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/adlc/archDesc.cpp:336:35: note: place parentheses around the
+      '&&' expression to silence this warning
+        !instr->is_ideal_branch() && instr->label_position() != -1) {
+                                  ^
+        (                                                         )
+2 errors generated.
+make[8]: *** [../generated/adfiles/archDesc.o] Error 1
+make[7]: *** [ad_stuff] Error 2
+make[6]: *** [product] Error 2
+make[5]: *** [generic_build2] Error 2
+make[4]: *** [product] Error 2
+make[3]: *** [all_product_universal] Error 2
+make[2]: *** [universal_product] Error 2
+make[1]: *** [hotspot-build] Error 2
+make: *** [build_product_image] Error 2
+
+
+
+－－－－Make error: 注释 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+llvm-g++ -D_ALLBSD_SOURCE -D_GNU_SOURCE -DAMD64 -DPRODUCT -I. -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/prims -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/cpu/x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os_cpu/bsd_x86/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/bsd/vm -I/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/os/posix/vm -I../generated -DHOTSPOT_RELEASE_VERSION="\"24.0-b56\"" -DHOTSPOT_BUILD_TARGET="\"product\"" -DHOTSPOT_BUILD_USER="\"root\"" -DHOTSPOT_LIB_ARCH=\"amd64\" -DHOTSPOT_VM_DISTRO="\"OpenJDK\"" -DTARGET_OS_FAMILY_bsd -DTARGET_ARCH_x86 -DTARGET_ARCH_MODEL_x86_64 -DTARGET_OS_ARCH_bsd_x86 -DTARGET_OS_ARCH_MODEL_bsd_x86_64 -DTARGET_COMPILER_gcc -DCOMPILER2 -DCOMPILER1 -fPIC -fno-rtti -fno-exceptions -pthread -m64 -pipe -Os -fno-strict-aliasing -DVM_LITTLE_ENDIAN -D_LP64=1 -fno-omit-frame-pointer -DINCLUDE_TRACE=1 -Werror -Wpointer-arith -Wconversion -Wsign-compare    -DDTRACE_ENABLED  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -c -fpch-deps -MMD -MP -MF ../generated/dependencies/precompiled.hpp.gch.d -x c++-header /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp -o precompiled.hpp.gch
+clang: error: unknown argument: '-fpch-deps' [-Wunused-command-line-argument-hard-error-in-future]
+clang: note: this will be a hard error (cannot be downgraded to a warning) in the future
+make[8]: *** [precompiled.hpp.gch] Error 1
+make[7]: *** [the_vm] Error 2
+make[6]: *** [product] Error 2
+make[5]: *** [generic_build2] Error 2
+make[4]: *** [product] Error 2
+make[3]: *** [all_product_universal] Error 2
+make[2]: *** [universal_product] Error 2
+make[1]: *** [hotspot-build] Error 2
+make: *** [build_product_image] Error 2
+
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+－－－－Make errors:  －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+－－－－ implicit conversion changes signedness: 'unsigned long long' to 'const jlong' => return (jlong)
+－－－－ 'finite' is deprecated: first deprecated in OS X 10.9 =>
+－－－－ implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' => return int(wcslen((const wchar_t*)x))
+－－－－ implicit conversion changes signedness: 'int' to 'unsigned long' => size($variable)
+－－－－ enumeration values not handled in switch => just "break;" for the not handled values.
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp:188:25: error: implicit
+      conversion changes signedness: 'unsigned long long' to 'const jlong' (aka 'const long long') [-Werror,-Wsign-conversion]
+const jlong min_jlong = CONST64(0x8000000000000000);
+            ~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp:185:22: note: expanded from
+      macro 'CONST64'
+#define CONST64(x)  (x ## LL)
+                     ^~~~~~~
+<scratch space>:91:1: note: expanded from here
+0x8000000000000000LL
+^~~~~~~~~~~~~~~~~~~~
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/allocation.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/globals.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/debug.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:33:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp:270:59: error: 'finite' is
+      deprecated: first deprecated in OS X 10.9 [-Werror,-Wdeprecated-declarations]
+inline int g_isfinite(jfloat  f)                 { return finite(f); }
+                                                          ^
+/usr/include/math.h:718:12: note: 'finite' declared here
+extern int finite(double) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_9, __IPHONE_NA, __IPHONE_NA);
+           ^
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/allocation.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/globals.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/debug.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:33:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp:271:59: error: 'finite' is
+      deprecated: first deprecated in OS X 10.9 [-Werror,-Wdeprecated-declarations]
+inline int g_isfinite(jdouble f)                 { return finite(f); }
+                                                          ^
+/usr/include/math.h:718:12: note: 'finite' declared here
+extern int finite(double) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_9, __IPHONE_NA, __IPHONE_NA);
+           ^
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/allocation.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/globals.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/debug.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:33:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp:276:44: error: implicit
+      conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Werror,-Wshorten-64-to-32]
+inline int wcslen(const jchar* x) { return wcslen((const wchar_t*)x); }
+                                    ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/allocation.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/globals.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/debug.hpp:29:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:251:90: error: implicit
+      conversion changes signedness: 'int' to 'unsigned long' [-Werror,-Wsign-conversion]
+inline address_word  mask_address_bits(address x, int m)      { return address_word(x) & m; }
+                                                                                       ~ ^
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:679:11: error: 4 enumeration
+      values not handled in switch: 'T_ADDRESS', 'T_NARROWOOP', 'T_CONFLICT'... [-Werror,-Wswitch]
+  switch (type) {
+          ^
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:696:11: error: enumeration
+      values 'number_of_states' and 'ilgl' not handled in switch [-Werror,-Wswitch]
+  switch (state) {
+          ^
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:1047:22: error: implicit
+      conversion changes signedness: 'unsigned long' to 'intptr_t' (aka 'long') [-Werror,-Wsign-conversion]
+  return mask_bits(x + m, ~m);
+         ~~~~~~~~~ ~~^~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:1047:20: error: implicit
+      conversion changes signedness: 'intptr_t' (aka 'long') to 'unsigned long' [-Werror,-Wsign-conversion]
+  return mask_bits(x + m, ~m);
+                   ^ ~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:1047:27: error: implicit
+      conversion changes signedness: 'uintx' (aka 'unsigned long') to 'intptr_t' (aka 'long') [-Werror,-Wsign-conversion]
+  return mask_bits(x + m, ~m);
+         ~~~~~~~~~        ^~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:1056:23: error: implicit
+      conversion changes signedness: 'uintx' (aka 'unsigned long') to 'intptr_t' (aka 'long') [-Werror,-Wsign-conversion]
+  return mask_bits(x, ~m);
+         ~~~~~~~~~    ^~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:1191:43: error: implicit
+      conversion changes signedness: 'unsigned int' to 'int' [-Werror,-Wsign-conversion]
+  return ((int)((unsigned int)high << 16) | (unsigned int)low);
+  ~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:1191:11: error: implicit
+      conversion changes signedness: 'int' to 'unsigned int' [-Werror,-Wsign-conversion]
+  return ((int)((unsigned int)high << 16) | (unsigned int)low);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/allocation.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/globals.hpp:125:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/cpu/x86/vm/c2_globals_x86.hpp:58:47: error: implicit conversion changes
+      signedness: 'int' to 'unsigned long' [-Werror,-Wsign-conversion]
+define_pd_global(intx, NewSizeThreadIncrease, ScaleForWordSize(4*K));
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:147:29: note: expanded from
+      macro 'ScaleForWordSize'
+#define ScaleForWordSize(x) align_size_down_((x) * 13 / 10, HeapWordSize)
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:380:53: note: expanded from
+      macro 'align_size_down_'
+#define align_size_down_(size, alignment) ((size) & ~((alignment) - 1))
+                                                  ~ ^
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/macros.hpp:251:68: note: expanded from macro
+      'define_pd_global'
+#define define_pd_global(type, name, value) const type pd_##name = value;
+                                                                   ^
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/allocation.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/globals.hpp:125:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/cpu/x86/vm/c2_globals_x86.hpp:91:37: error: implicit conversion changes
+      signedness: 'int' to 'unsigned long' [-Werror,-Wsign-conversion]
+define_pd_global(uintx,PermSize,    ScaleForWordSize(16*M));
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:147:29: note: expanded from
+      macro 'ScaleForWordSize'
+#define ScaleForWordSize(x) align_size_down_((x) * 13 / 10, HeapWordSize)
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:380:53: note: expanded from
+      macro 'align_size_down_'
+#define align_size_down_(size, alignment) ((size) & ~((alignment) - 1))
+                                                  ~ ^
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/macros.hpp:251:68: note: expanded from macro
+      'define_pd_global'
+#define define_pd_global(type, name, value) const type pd_##name = value;
+                                                                   ^
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/allocation.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/globals.hpp:125:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/cpu/x86/vm/c2_globals_x86.hpp:92:37: error: implicit conversion changes
+      signedness: 'int' to 'unsigned long' [-Werror,-Wsign-conversion]
+define_pd_global(uintx,MaxPermSize, ScaleForWordSize(64*M));
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:147:29: note: expanded from
+      macro 'ScaleForWordSize'
+#define ScaleForWordSize(x) align_size_down_((x) * 13 / 10, HeapWordSize)
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/globalDefinitions.hpp:380:53: note: expanded from
+      macro 'align_size_down_'
+#define align_size_down_(size, alignment) ((size) & ~((alignment) - 1))
+                                                  ~ ^
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/macros.hpp:251:68: note: expanded from macro
+      'define_pd_global'
+#define define_pd_global(type, name, value) const type pd_##name = value;
+                                                                   ^
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/precompiled/precompiled.hpp:29:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/asm/assembler.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/code/oopRecorder.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/runtime/handles.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/oops/klass.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/genOopClosures.hpp:28:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/memory/iterator.hpp:31:
+In file included from /Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/top.hpp:34:
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/ostream.hpp:76:46: error: implicit conversion changes
+      signedness: 'const int' to 'unsigned long long' [-Werror,-Wsign-conversion]
+   julong count() const { return _precount + _position; }
+                                           ~ ^~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/ostream.hpp:77:55: error: implicit conversion changes
+      signedness: 'int' to 'unsigned long long' [-Werror,-Wsign-conversion]
+   void set_count(julong count) { _precount = count - _position; }
+                                                    ~ ^~~~~~~~~
+/Users/ye_wenda/Applications/openjdk-7u40-fcs-src-b43-26_aug_2013/hotspot/src/share/vm/utilities/ostream.hpp:86:68: error: implicit conversion changes
+      signedness: 'int' to 'size_t' (aka 'unsigned long') [-Werror,-Wsign-conversion]
+   void print_raw(const char* str, int len)   { write(str,         len); }
+                                                ~~~~~              ^~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make[8]: *** [precompiled.hpp.gch] Error 1
+make[7]: *** [the_vm] Error 2
+make[6]: *** [product] Error 2
+make[5]: *** [generic_build2] Error 2
+make[4]: *** [product] Error 2
+make[3]: *** [all_product_universal] Error 2
+make[2]: *** [universal_product] Error 2
+make[1]: *** [hotspot-build] Error 2
+make: *** [build_product_image] Error 2
