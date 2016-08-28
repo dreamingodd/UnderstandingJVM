@@ -61,8 +61,8 @@ unset JAVA_HOME
 unset CLASSPATH
 
 # Jdk6 require
-export ARCH=x86_64
-export ARCH_DATA_MODEL=64
-export PLATFORM=macosx
+# export ARCH=x86_64
+# export ARCH_DATA_MODEL=64
+# export PLATFORM=macosx
 
 make 2>&1 | tee $ALT_OUTPUTDIR/build.log
