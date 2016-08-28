@@ -1,5 +1,7 @@
 export LANG=C
 export ALT_BOOTDIR=/usr/lib/jvm/java-6-openjdk-amd64/
+# export ALT_BOOTDIR=/usr/lib/jvm/java-7-openjdk-amd64/
+# export ALT_BOOTDIR=/home/softwares/jdk1.8.0_101/
 
 # Automatically download dependacies
 export ALLOW_DOWNLOADS=true
@@ -35,7 +37,7 @@ BUILD_INSTALL=false
 
 # Result ouput
 # export ALT_OUTPUTDIR=/Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7u4/build
-export ALT_OUTPUTDIR=/home/advance/JVM/jdkBuild/openjdk_6/build
+export ALT_OUTPUTDIR=/home/advance/JVM/jdkBuild/openjdk_7/build
 # export ALT_OUTPUTDIR=/Users/ye_wenda/advance/JVM/jdkBuild/openjdk_7/build
 # export ALT_OUTPUTDIR=/Users/ye_wenda/advance/JVM/jdkBuild/openjdk_8/build
 
