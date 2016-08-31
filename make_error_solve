@@ -1,0 +1,50 @@
+1-----------------------------------------------------------------------------------------
+ERROR: echo "*** This OS is not supported:" 'uname -a'; exit 1;
+make DISABLE_HOTSPOT_OS_VERSION_CHECK=OK
+
+2-----------------------------------------------------------------------------------------
+/openjdk/hotspot/srcmps/constantPoolOop.cpp:272:39: error: converting 'false' to pointer type 'methodOop' 
+修改/openjdk/hotspot/src/share/vm/oops/constantPoolOop.cpp 第272行 return false改为return (methodOop)false; 或者 return NULL;
+
+3-----------------------------------------------------------------------------------------
+openjdk/hotspot/srcm/opto/loopnode.cpp:896:50: error: converting 'false' to pointer type 'Node*
+SOLUTION: 修改openjdk/hotspot/src/share/vm/opto/loopnode.cpp: 第896行 return false改为return (Node*)false; 或者 return NULL;
+
+4-----------------------------------------------------------------------------------------
+Error occurred during initialization of VM Unable to load native library: /home/softwaresk1.8.0_101/jre/lib/amd64/libjava.so: symbol JVM_GetClassTypeAnnotations, version SUNWprivate_1.1 not defined in file libjvm.so with link time reference
+SOLUTION: openjdk/hotspot/make/linux/Makefile 去掉所有的 && ./test_gamma
+
+5-----------------------------------------------------------------------------------------
+/home/mengxiansen/openjdk/openjdk/hotspot/src/share/vm/runtime/interfaceSupport.hpp:430:0: error: "__LEAF" redefined [-Werror]
+SOLUTION: 
+ #define __LEAF(result_type, header) 
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:42:0: note: this is the location of the previous definition
+ #  define __LEAF , __leaf__
+
+在interfaceSupport.hpp增加
+
+#ifdef __LEAF
+#undef __LEAF
+
+#define __LEAF(result_type, header)                                  \
+  TRACE_CALL(result_type, header)                                    \
+  debug_only(NoHandleMark __hm;)                                     \
+  /* begin of body */
+#endif
+
+6-----------------------------------------------------------------------------------------
+gcc: error: unrecognized command line option '-mimpure-text'
+SOLUTION: gcc版本问题，这个命令在本机所用的4.7.2版的gcc中已经去除，既然不能降低gcc版本（本机ubuntu12.10内核用4.7.2版gcc编译），那就在openjdk/jdk/make/common/shared/Compiler-gcc.gmk 中去掉-mimpure-text命令
+
+7-----------------------------------------------------------------------------------------
+Error: time is more than 10 years from present: 1136059200000
+SOLUTION: 将 openjdk/jdk/src/share/classes/java/util/CurrencyData.properties 中所有的时间改为10年以内
+
+8-----------------------------------------------------------------------------------------
+collect2: error: ld returned 1 exit status
+SOLUTION: openjdk/jdk/make/javax/sound/jsoundalsa/Makefile 里面
+刪除 LDFLAGS += -lasound
+加入 OTHER_LDLIBS += -lasound
+
+
