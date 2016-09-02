@@ -1,0 +1,12 @@
+虚拟机输出结果存放路径：
+/home/advance/JVM/jdkBuild/openjdk_7/build/hotspot/outputdir/linux_amd64_compiler2
+
+虚拟机参数：
+HeapOom:
+-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
+JavaVmStackSof:
+-XX:+PrintGCDetails -Xss228k
+JavaVmStackOom(Computer hardware to threshold, stop manully):
+-XX:+PrintGCDetails -Xss10m
+RuntimeConstantPoolOom:
+-XX:+PrintGCDetails -XX:PermSize=10M -XX:MaxPermSize=10M
