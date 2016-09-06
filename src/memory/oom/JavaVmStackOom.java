@@ -7,8 +7,10 @@
 package memory.oom;
 
 /**
- * VM options: -XX:+PrintGCDetails -Xss10m
+ * VM options: -XX:+PrintGCDetails -Xss100m
  * 
+ * 跑了一分钟才顶到5G，cpu一直100%，我就停掉了。
+ * 书上似乎暗示了64位也不容易出问题。
  * @author ye
  */
 public class JavaVmStackOom {
