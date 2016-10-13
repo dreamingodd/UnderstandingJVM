@@ -12,6 +12,7 @@ import sun.misc.Unsafe;
 
 /**
  * VM args: -XX:+PrintGCDetails -Xmx20M -XX:MaxDirectMemorySize=10M
+ * jdk1.7以上才有。
  * @author ye
  */
 public class DirectMemoryOom {

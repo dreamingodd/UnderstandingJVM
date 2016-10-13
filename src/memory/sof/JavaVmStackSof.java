@@ -21,7 +21,7 @@ public class JavaVmStackSof {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         JavaVmStackSof sof = new JavaVmStackSof();
         try {
             sof.stackLeak();

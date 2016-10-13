@@ -18,7 +18,7 @@ public class HeapOom {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         List<OomObject> list = new ArrayList<OomObject>();
         int i = 0;
         try {
