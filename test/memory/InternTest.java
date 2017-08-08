@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package memory;
+package me.ywd.jvm.gc.memory;
 
 /**
  *

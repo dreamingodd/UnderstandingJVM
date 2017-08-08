@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package memory.oom;
+package me.ywd.jvm.memory.oom;
 
 /**
  * VM options: -XX:+PrintGCDetails -Xss100m

@@ -1,5 +1,5 @@
 
-package memory.oom;
+package me.ywd.jvm.memory.oom;
 
 import java.util.ArrayList;
 import java.util.List;

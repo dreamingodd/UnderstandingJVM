@@ -1,11 +1,11 @@
 
-package memory.oom;
+package me.ywd.jvm.memory.oom;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * VM options: -verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
+ * VM options: -verbose:me.ywd.jvm.gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
  * 
  * @author ye
  */

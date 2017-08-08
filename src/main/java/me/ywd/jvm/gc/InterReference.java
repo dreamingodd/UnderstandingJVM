@@ -1,4 +1,4 @@
-package gc;
+package me.ywd.jvm.gc;
 
 public class InterReference {
     private static final int _MB = 1024 * 1024;

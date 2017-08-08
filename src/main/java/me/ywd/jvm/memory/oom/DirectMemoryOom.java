@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package memory.oom;
+package me.ywd.jvm.memory.oom;
 
 import java.lang.reflect.Field;
 
@@ -34,7 +34,7 @@ public class DirectMemoryOom {
 [GC (Allocation Failure) [PSYoungGen: 507K->504K(1024K)] 507K->512K(14848K), 0.0005149 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
 Exception in thread "main" java.lang.OutOfMemoryError
     at sun.misc.Unsafe.allocateMemory(Native Method)
-    at memory.oom.DirectMemoryOom.main(DirectMemoryOom.java:26)
+    at DirectMemoryOom.main(DirectMemoryOom.java:26)
 Heap
  PSYoungGen      total 1024K, used 750K [0x00000000ff980000, 0x00000000ffb80000, 0x0000000100000000)
   eden space 512K, 48% used [0x00000000ff980000,0x00000000ff9bd8e8,0x00000000ffa00000)

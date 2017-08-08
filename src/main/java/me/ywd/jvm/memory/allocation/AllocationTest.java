@@ -1,4 +1,4 @@
-package memory.allocation;
+package me.ywd.jvm.memory.allocation;
 
 
 
@@ -13,7 +13,7 @@ public class AllocationTest {
     
     public final int _MB = 1024*1024;
 
-    // VM args: -verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8
+    // VM args: -verbose:me.ywd.jvm.gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8
     public void testAllocation() {
         byte[] allocation1, allocation2, allocation3, allocation4;
         allocation1 = new byte[2 * _MB];
@@ -24,24 +24,24 @@ public class AllocationTest {
 
     }
 
-    // VM args: -verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8 -XX:PretenureSizeThreshold=3145728
+    // VM args: -verbose:me.ywd.jvm.gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8 -XX:PretenureSizeThreshold=3145728
     public void testPretenureSizeThreshold() {
 
         byte[] allocation4 = new byte[4 * _MB];
     }
 
-    // VM args: -verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8 -XX:MaxTenuringThreshold=1
+    // VM args: -verbose:me.ywd.jvm.gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8 -XX:MaxTenuringThreshold=1
     private void testTenuringThreshold() {
         byte[] allocation1, allocation2, allocation3;
         allocation1 = new byte[_MB / 4];
         allocation2 = new byte[4 * _MB];
         allocation3 = new byte[4 * _MB];
-//        System.gc();
+//        System.me.ywd.jvm.gc();
         allocation3 = null;
         allocation3 = new byte[4 * _MB];
     }
 
-    // VM args: -verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8 -XX:MaxTenuringThreshold=15
+    // VM args: -verbose:me.ywd.jvm.gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio:8 -XX:MaxTenuringThreshold=15
     private void testTenuringThreshold2() {
         byte[] allocation1, allocation2, allocation3, allocation4;
         allocation1 = new byte[_MB / 4];

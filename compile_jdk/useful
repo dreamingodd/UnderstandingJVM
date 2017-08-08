@@ -3,7 +3,7 @@
 
 虚拟机参数：
 HeapOom:
--verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
+-verbose:me.ywd.jvm.gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
 JavaVmStackSof:
 -XX:+PrintGCDetails -Xss228k
 JavaVmStackOom(Computer hardware to threshold, stop manully):

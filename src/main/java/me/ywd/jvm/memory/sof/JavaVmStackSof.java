@@ -1,5 +1,5 @@
 
-package memory.sof;
+package me.ywd.jvm.memory.sof;
 
 /**
  * VM options: -XX:+PrintGCDetails -Xss228k
