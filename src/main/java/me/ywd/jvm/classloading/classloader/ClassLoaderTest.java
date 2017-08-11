@@ -28,8 +28,11 @@ public class ClassLoaderTest {
         };
 
         // (ClassLoaderTest) 强制转换也不行
-        Object obj = ywdLoader.loadClass("me.ywd.jvm.classloading.classloader.ClassLoaderTest").newInstance();
+        // ？？？？？？？？？？？？？？？？？？？？？？？
+        // 若ClassLoaderTest 进入自定义loadClass方法四次
+        // 若Test            进入系定义loadClass方法两次
+        Object obj = ywdLoader.loadClass("me.ywd.jvm.classloading.classloader.Test").newInstance();
         System.out.println(obj.getClass());
-        System.out.println(obj instanceof ClassLoaderTest);
+        System.out.println(obj instanceof Test);
     }
 }
